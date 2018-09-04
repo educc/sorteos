@@ -1,0 +1,5 @@
+matricula, nombres, apellidos, opciones, Puede ganar
+S54787, edu, Cacho Casas, 1, si
+S10201, Denis, Cacho Casas, 9, si
+S10202, Steve, Jobs, 5, no
+A, edu, cacho, 1, si

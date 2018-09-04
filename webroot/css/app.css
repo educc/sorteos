@@ -1,0 +1,226 @@
+* {
+  font-family: flexo;
+}
+html,
+body {
+  height: 100%;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.page-header {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/static/img/header.jpg");
+  text-align: center;
+  margin: 0px;
+  padding: 20px;
+  color: rgb(19,72,141);
+}
+.page-header h1 {
+  margin: 0px;
+}
+.page-header p {
+  margin: 10px 0px;
+}
+.main-container {
+  padding-top: 50px;
+  padding-right: 240px;
+}
+.wrapper-fluid-container {
+  padding: 20px;
+}
+.center-background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.clear {
+  clear: both;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.home-container {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.home-container .login-container {
+  position: absolute;
+  border: 1px solid black;
+  width: 300px;
+  bottom: 200px;
+  left: 50px;
+  border-radius: 5px;
+  background: #e0eef6;
+  border: 3px solid #032d45;
+}
+.home-container .login-container .wrapper-login-container {
+  padding: 10px 20px 10px 20px;
+}
+.home-container .login-container h4 {
+  background: #032d45;
+  color: white;
+  margin: 0px;
+  padding: 10px 0px;
+}
+.black-color {
+  color: black;
+}
+.chat-container {
+  position: fixed;
+  width: 240px;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+}
+.chat-container .wrapper-chat-container {
+  padding-top: 50px;
+  height: 100%;
+  border-left: 1px solid gray;
+}
+.chat-container .wrapper-chat-container .messages-container {
+  padding-top: 30px;
+  height: 100%;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container {
+  padding: 0px 5px 0px 5px;
+  height: 100%;
+  overflow-y: auto;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container .one-message-container .username {
+  font-weight: bold;
+  text-align: left;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container .one-message-container .username a {
+  color: black;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container .one-message-container .username span {
+  float: right;
+  color: gray;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 18px;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container .one-message-container .message {
+  overflow-x: hidden;
+  max-width: 240px;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container .one-message-container hr {
+  margin: 3px 0px;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container .one-message-container p {
+  font-size: 12px;
+  text-align: justify;
+}
+.chat-container .wrapper-chat-container .messages-container .wrapper-messages-container .one-message-container:first-child {
+  margin-top: 10px;
+}
+.chat-container .wrapper-chat-container .send-message-container {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.chat-container .wrapper-chat-container .send-message-container input,
+.chat-container .wrapper-chat-container .send-message-container span {
+  border: none;
+  border-radius: 0;
+}
+.chat-container .selected-emojis {
+  background: yellow;
+}
+.chat-container .emojis-container {
+  position: fixed;
+  right: 0px;
+  top: 100px;
+  width: 240px;
+  padding: 0px 10px;
+}
+.chat-container .emojis-container .wrapper-emojis-container {
+  border-radius: 5px;
+  background: white;
+  border: 2px solid black;
+}
+.chat-container .emojis-container .wrapper-emojis-container h4 {
+  margin: 0px;
+  padding: 3px 0px;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+}
+.chat-container .emojis-container .wrapper-emojis-container .emoticons-container {
+  padding: 16px;
+}
+.chat-container .emojis-container .wrapper-emojis-container .emoticons-container .emoticon-item {
+  width: 25px;
+  float: left;
+  padding: 1px 2px;
+}
+.chat-container .emojis-container .wrapper-emojis-container .emoticons-container .emoticon-item:hover {
+  background: #cce6ff;
+}
+.dev-sign {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding-left: 3px;
+  opacity: 0.3;
+  z-index: 999;
+}
+.browser-message {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #fafafa;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.browser-message .content-browser-message {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  left: 0%;
+  text-align: center;
+}
+.browser-message .content-browser-message h1 {
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+}
+.browser-message .content-browser-message p {
+  color: black;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.sorteo-box h5 {
+    text-align: center;
+    color: rgb(19,72,141);
+}
+
+.sorteo-box p {
+    text-align: center;
+    color: rgb(19,72,141);
+}
+
+.winner-select {
+    cursor: pointer;
+}
+
+.winner-progress {
+    cursor: progress;
+}

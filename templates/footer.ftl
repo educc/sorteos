@@ -45,7 +45,7 @@
             <a>{{ user }}</a>
             <span>{{ time }}</span>
         </p>
-        <p class='message'>{{ message }}</p>
+        <p class='message'>{{{ message }}}</p>
         <hr>
     </div>
 </script>

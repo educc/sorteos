@@ -1,9 +1,9 @@
 ﻿PENDIENTE (VIERNES 31 DE AGOSTO):
 
 5.  No debería abrir en IE. Mensaje.
-9.  Códigos de emoticon en chat.
 
 Done
+9.  Códigos de emoticon en chat.
 8.  Verificar que no sortee meses futuros.
 7.  Poner “foto_gandor” luego de sortear. La foto del sorteo y del ganador debe ser la misma.
 6.  Incrementar el tiempo de sesión a 12 horas.

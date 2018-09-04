@@ -84,39 +84,60 @@ public class SessionHandlers {
               Session session = ctx.session();
 
               if(user.isPresent()){
-                String fullname = user.get().getName() + " " + user.get().getLastName();
 
+
+                if(shouldVerifyPass()){
                   vertx.executeBlocking(future -> {
 
-                      future.complete(loginWithAD(programAuth,
-                          attributes.get("userId"),
-                          attributes.get("password")));
+                    future.complete(loginWithAD(programAuth,
+                            attributes.get("userId"),
+                            attributes.get("password")));
                   }, false, res -> {
-                      if(res.failed()){
-                          session.put(WebVerticle.SESSION_MESSAGE, "Hubo un problema en el logueo, consulte a soporte.");
-                          RouterUtils.redirect(ctx, "/");
-                          return;
-                      }
+                    if(res.failed()){
+                      session.put(WebVerticle.SESSION_MESSAGE, "Hubo un problema en el logueo, consulte a soporte.");
+                      RouterUtils.redirect(ctx, "/");
+                      return;
+                    }
 
-                      if( Boolean.TRUE.equals(res.result())){
-
-                          session.put(SESSION_USER, fullname);
-                          session.put(SESSION_USER_ID, user.get().getId());
-                          session.put(SESSION_USER_OPTIONS, user.get().getOptions());
-                          session.put(SESSION_USER_CANWIN, user.get().isCanWin());
-
-                          RouterUtils.redirect(ctx, "/app/");
-                      }else{
-                          session.put(WebVerticle.SESSION_MESSAGE, "Credenciales incorrectas.");
-                          RouterUtils.redirect(ctx, "/");
-                      }
+                    handleLoginAction(res.result(), user, ctx);
                   });
+                }else{
+                  handleLoginAction(new Boolean(true), user, ctx);
+                }
 
               }else{
                 session.put(WebVerticle.SESSION_MESSAGE, loginFailMessage);
                 RouterUtils.redirect(ctx, "/");
               }
             });
+  }
+
+  private static void handleLoginAction(Object result, Optional<User> user, RoutingContext ctx){
+    Session session = ctx.session();
+
+    if( Boolean.TRUE.equals(result)){
+      String fullname = user.get().getName() + " " + user.get().getLastName();
+
+      session.put(SESSION_USER, fullname);
+      session.put(SESSION_USER_ID, user.get().getId());
+      session.put(SESSION_USER_OPTIONS, user.get().getOptions());
+      session.put(SESSION_USER_CANWIN, user.get().isCanWin());
+
+      RouterUtils.redirect(ctx, "/app/");
+    }else{
+      session.put(WebVerticle.SESSION_MESSAGE, "Credenciales incorrectas.");
+      RouterUtils.redirect(ctx, "/");
+    }
+  }
+
+  private static boolean shouldVerifyPass(){
+    String ignore = System.getenv("IGNORE_PASS");
+    if(ignore != null){
+      try{
+        return Boolean.parseBoolean(ignore);
+      }catch (NumberFormatException ex){}
+    }
+    return false;
   }
 }
 

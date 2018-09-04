@@ -70,6 +70,8 @@ public class RewardVerticle extends AbstractVerticle {
                             if(user != null){
                               users.removeIf(it -> it.getId().equals(user.getId()));
                               raffle.setWinner(user.completeName());
+                              raffle.setPhotoWinnerPath(raffle.getPhotoPath());
+                              raffle.setPhotoPath(null);
 
                               vertx.eventBus().publish(Events.SAVE_WINNER, raffle);
                             }else{

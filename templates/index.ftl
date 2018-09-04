@@ -1,10 +1,12 @@
 <#include "header.ftl">
-<div class="home-container center-background"
-     style="background-image: url('/static/img/home.jpg')">
+<div class="home-container">
+    <div class="home-container-child center-background" style="background-image: url('/static/img/home.jpg?v=${ context.random }')">
+        &nbsp;
+    </div>
 
 <div  class="login-container">
 
-    <h4 class='text-center'>Bienvenidos a <strong>${ context.appName }</strong></h4>
+    <h4 class='text-center'>Bienvenidos a <strong><br>${ context.appName }</br></strong></h4>
 
     <div class='wrapper-login-container'>
         <form action="/iniciar-sesion" method="POST" class="form-horizontal">
@@ -43,7 +45,6 @@
             </#if>
         </form>
     </div>
-</div>
 </div>
 
 <#include "footer.ftl">

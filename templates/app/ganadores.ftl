@@ -1,6 +1,6 @@
 <#include "../header.ftl">
 
-<div class="page-header">
+<div class="page-header" style="background-image: url('/static/img/header.jpg?v=${ context.random }');">
     <h1>Ganadores</h1>
 </div>
 <div class="fluid-container">

@@ -1,57 +1,12 @@
-[Sorteo Junio]
-descripcion = Sorteo para el d\u00eda del Ingeniero
-fecha = 01/06/2018 12:00 AM
-ganador = S10201:  Denis  Cacho Casas
-
-[Sorteo Julio]
-descripcion = Sorteo para el d\u00eda del Ingeniero v1000
+[Sorteo Septiembre]
+descripcion = Sorteo pa setiembre
 foto_ganador = /static/img/premio.jpg
-fecha = 01/07/2018 12:00 AM
-ganador = S54787:  edu  Cacho Casas
-
-[Sorteo Setiembre]
-descripcion = Sorteo para el d\u00eda del Ingeniero
-fecha = 16/09/2018 10:00 AM
-
-[Sorteo Octubre]
-descripcion = Sorteo para el d\u00eda del Ingeniero v1000
-fecha = 16/10/2018 10:00 AM
-ganador = S54787:  edu  Cacho Casas
-
-[Sorteo Noviembre]
-descripcion = Sorteo para el d\u00eda del Ingeniero
-fecha = 16/11/2018 10:00 AM
-
-[Sorteo Noviembre2]
-descripcion = Sorteo para el d\u00eda del Ingeniero
-fecha = 16/11/2018 10:00 AM
-
-[Sorteo Noviembre3]
-descripcion = Sorteo para el d\u00eda del Ingeniero
-fecha = 16/11/2018 10:00 AM
-
-[Sorteo pahoy]
-descripcion = hoy pe
-foto = /static/img/premio.jpg
-foto_ganador = /static/img/header.jpg
-fecha = 02/08/2018 08:49 PM
+fecha = 03/09/2018 08:00 AM
 ganador = S10201:  Denis  Cacho Casas
 
-[Sorteo Agosto]
-descripcion = Sorteo para el d\u00eda del Ingeniero
-foto = /static/img/premio.jpg
-fecha = 03/08/2018 11:51 PM
-ganador = S10201:  Denis  Cacho Casas
-
-[Sorteo Septiembre]
+[Sorteo Bug]
 descripcion = Sorteo pa setiembre
-foto = /static/img/premio.jpg
-fecha = 07/08/2018 12:00 AM
+foto_ganador = /static/img/premio.jpg
+fecha = 03/09/2018 09:45 PM
 ganador = S10201:  Denis  Cacho Casas
-
-[Sorteo Septiembre]
-descripcion = Sorteo pa setiembre
-foto = /static/img/premio.jpg
-fecha = 07/08/2018 01:25 PM
-ganador = S54787:  edu  Cacho Casas
 

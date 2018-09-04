@@ -166,3 +166,7 @@ nbdist/
 #custom sorteos app
 auth.exe
 messages.db
+*.iml
+.idea/
+.vertx/
+target

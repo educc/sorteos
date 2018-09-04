@@ -140,8 +140,11 @@ public class WebVerticle extends AbstractVerticle {
   private void setSessionHandlers(Router router){
     // We need a cookie handler first
     router.route().handler(CookieHandler.create());
+
     SessionStore store = LocalSessionStore.create(vertx);
     SessionHandler sessionHandler = SessionHandler.create(store);
+    sessionHandler.setSessionTimeout(12*60*60*1000); //12 horas
+
     router.route().handler(sessionHandler);
   }
 
@@ -349,7 +352,7 @@ public class WebVerticle extends AbstractVerticle {
   }
 
   private void setContextNamesHandler(RoutingContext ctx){
-    ctx.put(CTX_RANDOMNUMBER, new Double(Math.random()*1000).intValue());
+    ctx.put(CTX_RANDOMNUMBER, new Double(Math.random()*10000).intValue());
     ctx.put(CTX_APP_NAME, config().getString(CTX_APP_NAME, "Sorteos App"));
     ctx.next();
   }

@@ -1,10 +1,13 @@
 ﻿PENDIENTE (VIERNES 31 DE AGOSTO):
-1.  El archivo start.bat debe funcionar solo y no cerrarse.
-2.  La frase “Sorteos App” debe estar junta en la 2da línea (enter).
-3.  No jala la imagen home, welcome, chat, header. Algunos sí la ven.
-4.  La imagen de fondo no se ajusta con el espacio del chat. Home, welcome, header
+
 5.  No debería abrir en IE. Mensaje.
-6.  Incrementar el tiempo de sesión a 12 horas.
-7.  Poner “foto_gandor” luego de sortear. La foto del sorteo y del ganador debe ser la misma.
-8.  Verificar que no sortee meses futuros.
 9.  Códigos de emoticon en chat.
+
+Done
+8.  Verificar que no sortee meses futuros.
+7.  Poner “foto_gandor” luego de sortear. La foto del sorteo y del ganador debe ser la misma.
+6.  Incrementar el tiempo de sesión a 12 horas.
+4.  La imagen de fondo no se ajusta con el espacio del chat. Home, welcome, header
+3.  No jala la imagen home, welcome, chat, header. Algunos sí la ven.
+2.  La frase “Sorteos App” debe estar junta en la 2da línea (enter).
+1.  El archivo start.bat debe funcionar solo y no cerrarse.

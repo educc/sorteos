@@ -4,7 +4,7 @@
     var APP = {};
     APP.data = ${ context.list }
 </script>
-<div class="page-header">
+<div class="page-header" style="background-image: url('/static/img/header.jpg?v=${ context.random }');">
     <#if context.session().get("isUserCanWin") >
         <#if context.session().get("userOptions") ??>
 
@@ -43,6 +43,7 @@
 <script type="text/javascript" src="/static/js/utils.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
+        var MAX_TIME = 12*60*60*1000;
 
         function transform(){
             $.each(APP.data.body, function(idx,val){
@@ -70,30 +71,36 @@
             $box.find("[data-date]").each(function(idx, val){
                 var $boxRaffle = $(val);
                 var futureDate = new Date($boxRaffle.attr("data-date"));
+
+                console.log(futureDate);
+
                 if(Utils.isValidDate(futureDate)){
                     var diff = futureDate - (new Date());
-                    console.log(diff);
+
+                    if( diff < MAX_TIME){
                     setTimeout(function(){
-                        console.log("raffle now");
+                            console.log("raffle now");
 
-                        var result = $boxRaffle.find("img");
-                        if(result.length > 0){
-                            result[0].src = urlImgLoading;
-                            var $item = $(result[0])
-                                    .toggleClass("winner-progress", true);
+                            var result = $boxRaffle.find("img");
+                            if(result.length > 0){
+                                result[0].src = urlImgLoading;
+                                var $item = $(result[0])
+                                        .toggleClass("winner-progress", true);
 
-                            setTimeout(function(){
-                                result[0].src = urlImgSeeWinner;
+                                setTimeout(function(){
+                                    result[0].src = urlImgSeeWinner;
 
-                                $item
-                                    .toggleClass("winner-progress", false)
-                                    .toggleClass("winner-select", true)
-                                    .click(function(){
-                                        window.location.href = redirectPath;
-                                    });
-                            }, 10*1000);
-                        }
-                    }, diff);
+                                    $item
+                                        .toggleClass("winner-progress", false)
+                                        .toggleClass("winner-select", true)
+                                        .click(function(){
+                                            window.location.href = redirectPath;
+                                        });
+                                }, 10*1000);
+                            }
+                        }, diff);
+                    }
+
                 }
             });
         }

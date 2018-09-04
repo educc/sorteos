@@ -3,7 +3,7 @@
 
 <form id="frmChat" action="/chat/send" method="POST" class='chat-container'>
 
-	<div class="wrapper-chat-container" style="background-image: url('/static/img/chat-pattern-background.jpg')">
+	<div class="wrapper-chat-container" style="background-image: url('/static/img/chat-pattern-background.jpg?v=${ context.random }')">
 
 		<div class="messages-container">
 
